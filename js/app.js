@@ -9,9 +9,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-  let sumOfNum = a + b;
-  let message = `The sum of ${a} and ${b} is ${sumOfNum}.`;
-  return [sumOfNum, message];
+    let sumOfNum = a + b;
+    let message = `The sum of ${a} and ${b} is ${sumOfNum}.`;
+    return [sumOfNum, message];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -29,13 +29,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-  let prod = a * b;
-  let mathWizard = `The product of ${a} and ${b} is ${prod}.`;
-  return [prod, mathWizard];
+    let prod = a * b;
+    let mathWizard = `The product of ${a} and ${b} is ${prod}.`;
+    return [prod, mathWizard];
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -50,13 +50,34 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
+
+
+
+
+
+// EXACTLY follow this example and use the values that were input into the function:
+
+// Third element: "4 and 7 and 5 sum to 16."
+// Fourth element: "The product of 4 and 7 and 5 is 140."
+
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+    let sum1 = sum(a, b)[0]
+    let sum2 = sum(sum1, c)[0]
 
+    let multiply1 = multiply(a, b)[0]
+    let multiply2 = multiply(multiply1, c)[0]
+
+    let sum3 = `${a} and ${b} and ${c} sum to ${sum2}.`
+    let multiply3 = `The product of ${a} and ${b} and ${c} is ${multiply2}.`
+
+    'The product of '+ a +' and '+ b +' and '+ c +' is '+  multiply2 +'.'
+
+    return [sum2, multiply2, sum3, multiply3]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -120,7 +141,7 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
