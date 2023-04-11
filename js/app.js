@@ -32,7 +32,6 @@ function multiply(a, b) { //eslint-disable-line
   let prod = a * b;
   let mathWizard = `The product of ${a} and ${b} is ${prod}.`;
   return [prod, mathWizard];
-  
 }
 
 // Here is the test for multiply(); uncomment it to run it
