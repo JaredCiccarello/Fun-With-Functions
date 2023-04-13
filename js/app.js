@@ -67,7 +67,9 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     let sum3 = `${a} and ${b} and ${c} sum to ${sum2}.`
     let multiply3 = `The product of ${a} and ${b} and ${c} is ${multiply2}.`
 
-    'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply2 + '.'
+
+    // 'The product of '+ a +' and '+ b +' and '+ c +' is '+  multiply2 +'.'
+
 
     return [sum2, multiply2, sum3, multiply3]
 }
@@ -92,6 +94,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+
         //eslint-disable-line
     let sum1 = sum(sumArr[0], sumArr[1])[0]
     let totalSum = sum(sum1, sumArr[2])[0]
@@ -101,6 +104,7 @@ function sumArray(sumArr) { //eslint-disable-line
     console.log(sumArr)
     
     return [totalSum, message];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
