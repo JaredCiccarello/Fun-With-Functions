@@ -30,8 +30,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
     let prod = a * b;
-    let mathWizard = `The product of ${a} and ${b} is ${prod}.`;
-    return [prod, mathWizard];
+    let message = `The product of ${a} and ${b} is ${prod}.`;
+    return [prod, message];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -95,14 +95,14 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
 
-        //eslint-disable-line
+    //eslint-disable-line
     let sum1 = sum(sumArr[0], sumArr[1])[0]
     let totalSum = sum(sum1, sumArr[2])[0]
     // console.log(totalSum)
 
     let message = `${sumArr} was passed in as an array of numbers, and ${totalSum} is their sum.`;
     // console.log(sumArr)
-    
+
     return [totalSum, message];
 
 }
@@ -134,18 +134,18 @@ Test this function by hand in the console to get it working, and when you think 
 // and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
 
 // function multiply(a, b) { //eslint-disable-line
-    // let prod = a * b;
+// let prod = a * b;
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-let multArr1 = multiply(multArr[0], multArr[1])[0]
-let multArr2 = multiply(multArr1, multArr[2])[0]
-console.log(multArr2)
+    let multArr1 = multiply(multArr[0], multArr[1])[0]
+    let multArr2 = multiply(multArr1, multArr[2])[0]
+    console.log(multArr2)
 
-let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multArr2}.`
-console.log(message)
+    let message = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multArr2}.`
+    console.log(message)
 
-return [multArr2, message]
+    return [multArr2, message]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -169,14 +169,34 @@ This function should be dynamic, accepting an array of any length.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
+
+
+
+// Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, 
+
+// and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+
+// "The numbers 1,2,3,4,5 have a product of 120."
+
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let product1 = 1;
+    let str = '';
+    for (let i = 0; i < dynamicArray.length; i++) {
+        product1 = multiply(product1, dynamicArray[i])[0];
+        str += dynamicArray[i].toString() + ',';
+        // console.log(dynamicArray[1])
+    }
+    str = str.substring(0, str.length-1);
+    let totalString = `The numbers ${str} have a product of ${product1}.`;
+    
+    console.log(totalString)
+    return [product1, totalString];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
