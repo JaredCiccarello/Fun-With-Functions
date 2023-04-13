@@ -51,10 +51,6 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 
-
-
-
-
 // EXACTLY follow this example and use the values that were input into the function:
 
 // Third element: "4 and 7 and 5 sum to 16."
@@ -71,7 +67,7 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
     let sum3 = `${a} and ${b} and ${c} sum to ${sum2}.`
     let multiply3 = `The product of ${a} and ${b} and ${c} is ${multiply2}.`
 
-    'The product of '+ a +' and '+ b +' and '+ c +' is '+  multiply2 +'.'
+    'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + multiply2 + '.'
 
     return [sum2, multiply2, sum3, multiply3]
 }
@@ -91,16 +87,25 @@ IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
 
+
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+        //eslint-disable-line
+    let sum1 = sum(sumArr[0], sumArr[1])[0]
+    let totalSum = sum(sum1, sumArr[2])[0]
+    console.log(totalSum)
 
+    let message = `${sumArr} was passed in as an array of numbers, and ${totalSum} is their sum.`;
+    console.log(sumArr)
+    
+    return [totalSum, message];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
